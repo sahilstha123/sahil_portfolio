@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary: #ecdfcc;
+  --secondary: #a6b37d;
+  --ternary: rgb(255, 30, 0);
+
+  --bg-dark: #2a2a2a;
+  --dark-text-color: white;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+.wrapper {
+  background-color: var(--primary);
+  min-height: 100vh;
+  position: relative;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* darkmode */
+[for="darkmode"] {
+  position: absolute;
+  top: 7rem;
+  left: 3rem;
+}
+[for="darkmode"]:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+  transition: all 0.3s;
+}
+#darkmode:checked + .wrapper {
+  --primary: var(--bg-dark);
+  color: var(--dark-text-color);
+}
+/* Dark mode toggle */
+#darkmode:checked + .wrapper .left button {
+  background-color: var(--ternary); /* ternary background in dark mode */
+}
+
+#darkmode {
+  display: none;
+}
+#darkmode:checked + .left button {
+  --bg-dark: var(--ternary);
+}
+/* navbar */
+nav {
+  box-shadow: 4px -2px 40px 9px rgba(128, 128, 128, 0.463);
+}
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+}
+.logo {
+  font-size: 1.5rem;
+  position: relative;
+}
+.logo :first-child {
+  margin-right: 1rem;
+  font-weight: bold;
+}
+.line::before {
+  content: "";
+  height: 100%;
+  width: 3px;
+  background: var(--ternary);
+  position: absolute;
+  left: 23%;
+}
+.nav-item {
+  list-style-type: none;
+  font-weight: bold;
+}
+.nav-item li:hover {
+  color: var(--ternary);
+  transform: scale(1.2);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+/* hero section */
+.hero {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+  max-height: 90vh; /* Increased height to accommodate image */
+  padding: 2rem 0;
+}
+
+.right img {
+  width: 100%;
+  height: auto; /* Ensures proper scaling */
+  max-height: 100%; /* Limits image height */
+  object-fit: cover; /* Ensures image covers the space without distortion */
+}
+
+.left {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+strong {
+  font-size: 1.3rem;
+}
+.left p + p {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+}
+.left p {
+  padding-top: 0.5rem;
+}
+.left div {
+  margin-top: 1rem;
+}
+.left button {
+  background-color: var(--bg-dark); /* black background when dark mode is off */
+  padding: 0.8rem 1.5rem;
+  border: none;
+  color: var(--dark-text-color);
+  border-radius: 10px;
+}
