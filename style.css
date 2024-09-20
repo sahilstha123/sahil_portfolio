@@ -4,16 +4,25 @@
   padding: 0;
 }
 :root {
-  --primary: #ecdfcc;
-  --secondary: #a6b37d;
+  --primary: #F5EFFF;
+  --secondary: #E5D9F2;
   --ternary: rgb(255, 30, 0);
-
+  --white: white;
   --bg-dark: #2a2a2a;
   --dark-text-color: white;
+  --shadow: 4px -2px 40px 9px rgba(128, 128, 128, 0.463);
+  --hover: rgb(189, 24, 2);
+  --hoveroff: black;
+
+  --border-color-on: white;
+  --border-color-off: var(--bg-dark);
+
+  --content-logo-color: var(--white);
 }
 .container {
   width: 80%;
   margin: auto;
+  max-width: 1400px;
 }
 .flex {
   display: flex;
@@ -28,6 +37,14 @@
   display: grid;
   gap: 1rem;
 }
+.title {
+  text-align: center;
+  margin: 2.5rem 0;
+}
+.title span {
+  border-bottom: 2px solid var(--ternary);
+  letter-spacing: 2px;
+}
 .wrapper {
   background-color: var(--primary);
   min-height: 100vh;
@@ -38,8 +55,9 @@ a {
   color: inherit;
 }
 /* darkmode */
+
 [for="darkmode"] {
-  position: absolute;
+  position: fixed;
   top: 7rem;
   left: 3rem;
 }
@@ -49,23 +67,29 @@ a {
   transition: all 0.3s;
 }
 #darkmode:checked + .wrapper {
+  --secondary:var(--bg-dark);
   --primary: var(--bg-dark);
   color: var(--dark-text-color);
+  --border-color-off: var(--border-color-on);
 }
 /* Dark mode toggle */
 #darkmode:checked + .wrapper .left button {
-  background-color: var(--ternary); /* ternary background in dark mode */
+  background-color: var(--ternary);
 }
 
 #darkmode {
   display: none;
 }
-#darkmode:checked + .left button {
-  --bg-dark: var(--ternary);
+
+#darkmode:not(checked) + .wrapper .left button:hover {
+  --hover: var(--hoveroff);
 }
 /* navbar */
 nav {
-  box-shadow: 4px -2px 40px 9px rgba(128, 128, 128, 0.463);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow);
+  /* position: sticky;
+  top: 0; */
 }
 .navbar {
   justify-content: space-between;
@@ -112,18 +136,21 @@ nav {
 
 .right img {
   width: 100%;
-  height: auto; /* Ensures proper scaling */
-  max-height: 100%; /* Limits image height */
+  max-width: 400px;
+  height: auto;
+  max-height: 100%;
   object-fit: cover; /* Ensures image covers the space without distortion */
 }
 
 .left {
   flex-direction: column;
   justify-content: center;
+  margin-left: 5vw;
 }
 
 .right {
   justify-content: flex-end;
+  height: 80vh;
 }
 
 strong {
@@ -146,4 +173,110 @@ strong {
   border: none;
   color: var(--dark-text-color);
   border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+.left button:hover {
+  transform: scale(1.15);
+  transition: 0.3s;
+  background-color: var(--hover);
+  cursor: pointer;
+}
+
+/* banner css*/
+.banner {
+  border: 2px solid var(--border-color-off);
+  margin-top: 1rem;
+  border-radius: 40px;
+  padding: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+
+.horizontal_line {
+  width: 2px;
+  height: 70px;
+  background: grey;
+}
+
+.content p {
+  margin-top: 0.5rem;
+}
+.icon {
+  background-color: var(--ternary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.fa-solid {
+  color: var(--content-logo-color);
+  font-size: 1.5rem;
+}
+.content span {
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-size: 1.3rem;
+}
+.content p {
+  color: var(--ternary);
+}
+/* skill section */
+.skill {
+  margin-top: 1rem;
+}
+.skill-container{
+  padding: 1rem 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.skill-container div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skill-container .fa-brands{
+  font-size: 3rem;
+
+}
+
+/* project section */
+
+.project-container{
+  grid-template-columns: repeat(2,1fr);
+  gap: 2rem;
+  padding: 1rem 0;
+}
+.project-container>div{
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+}
+
+.top img{
+  object-fit: contain;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  max-height: 100%;
+}
+
+/* footer */
+footer {
+  background-color: var(--bg-dark);
+  width: 100%;
+  height: 400px;
+}
+.bottom .fa-brands{
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+.project-name{
+  padding-bottom: 2rem;
+}
+
+.project-name h3{
+  letter-spacing: 2px;
+  padding: .5rem 0;
 }
