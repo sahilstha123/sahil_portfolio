@@ -25,20 +25,20 @@
                     <div>Sahil</div>
                     <div class="line">Full Stack Developer</div>
                 </div>
-                <div class="menu">
+                <div class="menu ">
                     <ul class="flex nav-item">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Skills</a></li>
-                        <li><a href="">Project</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Project</a></li>
+                        <li><a href="#abouts">About</a></li>
+                        <li><a href="#contacts">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- hero section -->
-        <section class="hero container grid">
-            <div class="left flex">
+        <section class="hero container grid" id="hero">
+            <div class="left flex ">
                 <p>Hi I'm <strong>Sahil Shrestha</strong></p>
                 <p>Full stack developer</p>
                 <div>
@@ -80,7 +80,7 @@
         </section>
 
         <!-- skill section -->
-        <section class="skill">
+        <section class="skill" id="skills">
             <h2 class="title">
                 <span>Skills</span>
             </h2>
@@ -102,74 +102,169 @@
                     <span>Git Hub</span>
                 </div>
                 <div>
-                    <i class="fa-brands fa-python" ></i>
-                    <span>python</span>
+                    <div class="python-icon">
+                        <i class="fab fa-python" style="color: #3776AB;"></i> <!-- Blue -->
+                        <span>Python</span>
+                    </div>
+                    
+                    
                 </div>
             </div>
         </section>
 
         <!-- project container section -->
-         <section class="project container">
+        <section class="project container" id="projects">
             <h2 class="title">
                 <span>My Projects</span>
             </h2>
             <div class="project-container grid">
                 <div>
                     <div class="top">
-                        <img src="./assets/portfolio_a.png" alt="" width="500px"height="400px">
+                        <img src="./assets/portfolio_a.png" alt="" width="500px" height="400px">
                     </div>
                     <div class="bottom">
                         <i class="fa-brands fa-github"></i>
                         <div class="container project-name">
-                           <h3>Personal Portfolio</h3>
-                           <p>Tech Stack : HTML, CSS</p>
+                            <h3>Personal Portfolio</h3>
+                            <p>Tech Stack : HTML, CSS</p>
                         </div>
                     </div>
                 </div>
 
                 <div>
                     <div class="top">
-                        <img src="./assets/portfolio_a.png" alt="" width="500px"height="400px">
+                        <img src="./assets/portfolio_a.png" alt="" width="500px" height="400px">
                     </div>
                     <div class="bottom">
                         <i class="fa-brands fa-github"></i>
                         <div class="container project-name">
-                           <h3>Personal Portfolio</h3>
-                           <p>Tech Stack : HTML, CSS</p>
+                            <h3>Personal Portfolio</h3>
+                            <p>Tech Stack : HTML, CSS</p>
                         </div>
                     </div>
                 </div>
 
                 <div>
                     <div class="top">
-                        <img src="./assets/portfolio_a.png" alt="" width="500px"height="400px">
+                        <img src="./assets/portfolio_a.png" alt="" width="500px" height="400px">
                     </div>
                     <div class="bottom">
                         <i class="fa-brands fa-github"></i>
                         <div class="container project-name">
-                           <h3>Personal Portfolio</h3>
-                           <p>Tech Stack : HTML, CSS</p>
+                            <h3>Personal Portfolio</h3>
+                            <p>Tech Stack : HTML, CSS</p>
                         </div>
                     </div>
                 </div>
 
                 <div>
                     <div class="top">
-                        <img src="./assets/portfolio_a.png" alt="" width="500px"height="400px">
+                        <img src="./assets/portfolio_a.png" alt="" width="500px" height="400px">
                     </div>
                     <div class="bottom">
                         <i class="fa-brands fa-github"></i>
                         <div class="container project-name">
-                           <h3>Personal Portfolio</h3>
-                           <p>Tech Stack : HTML, CSS</p>
+                            <h3>Personal Portfolio</h3>
+                            <p>Tech Stack : HTML, CSS</p>
                         </div>
                     </div>
                 </div>
-                
+
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="abouts">
+            <h2 class="title">
+                <span>About Me</span>
+            </h2>
+            
+            <div class="about-container container grid">
+                <div class=" flex-center left-img">
+                    <img src="./assets/sahil.png" alt="Sahil Shrestha" width="100%">
+                </div>
+                <div class="right flex">
+                    <h2><strong>Sahil Shrestha</strong></h2>
+                    <p> I am currently pursuing my Bachelor's degree at Birendra Memorial College. I am passionate about learning and exploring new opportunities in the field of technology, especially web development and AI-driven systems.</p>
+                    <p>With a strong desire to enhance my skills, I am eager to learn, solve complex problems, and contribute to the tech community. I am driven by curiosity and a love for coding.</p>
+                    <address>Itahari, Nepal</address>
+                    <h3>Interests</h3>
+                    <div class="interest-item flex">
+                        <span>Coding</span>
+                        <span>Gaming</span>
+                        <span>Watching Movies</span>
+                        <span>Traveling</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+         <section class="contact" id="contacts">
+            <h2 class="title">
+                <span>Contact Me</span>
+            </h2>
+            <div class="contact-item flex-center container">
+                <div>
+                    <a href="https://www.linkedin.com/in/sahil-shrestha-155a222a9/" target="_blank">
+                        <i class="fa-brands fa-linkedin" style="color: rgb(67, 61, 224);"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://github.com/sahilstha123" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/newar.sahil.7" target="_blank">
+                        <i class="fa-brands fa-facebook " style="color: blue;"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="" target="_blank">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <span class="flex-center">OR</span>
+            <div class="contact-email flex-center container">
+                <span>Your-email@gmail.com</span>
+                <div class="email-icon flex-center">
+                    <a href="mailto:sthasahil321@gmail.com">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </a>
+                </div>
+
             </div>
          </section>
+        
         <!-- footer -->
-        <footer></footer>
+        <footer>
+            <div class=" flex-center footer-sec">
+                <div class="links">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Project</a></li>
+                        <li><a href="#contacts">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="Social">
+                    <h3>Social Links</h3>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/sahil-shrestha-155a222a9/" target="_blank">LinkendIN</a></li>
+                        <li><a href="https://github.com/sahilstha123" target="_blank">github</a></li>
+                        <li><a href="https://www.facebook.com/newar.sahil.7" target="_blank">facebook</a></li>
+                        <li><a href="">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>&copy;All right reserved made by Sahil Shrestha</p>
+        </footer>
+        <a href="#hero" class="goup ">
+            <i class="fa-solid fa-circle-arrow-up" style="color: red;"></i>
+        </a>
     </div>
 
 </body>
