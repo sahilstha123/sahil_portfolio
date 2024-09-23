@@ -78,7 +78,8 @@ a {
   --primary: var(--bg-dark);
   --dark-text-color: var(--white);
   --content-logo-color: var(--white);
-  --border-color-off: var(--border-color-on);
+  --border-color-off: var(--border-color-on) ;
+  color: var(--white);
 }
 
 /* Dark mode toggle */
@@ -298,6 +299,7 @@ nav {
 .about {
   background-color: var(--about-bg-color);
   padding: 1rem 0;
+  color:var(--hoveroff);
 }
 .about-container {
   grid-template-columns: 1fr 3fr;
